@@ -1,11 +1,11 @@
 {% load static %}
+
 <!--
 <link href="{% static '/css/main.css' %}" rel="stylesheet" type="text/css">
 
 <h3>Hello World</h3>
 
 
-<img src="{% static 'images/Saud.jpg' %}" >
 -->
 
 <!DOCTYPE html>
@@ -22,13 +22,44 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="card card-body"></div>
+                <div class="card card-body h-100 border-info" id="profile-wrapper">
+                    <img id="profile-pic" src="{% static 'images/Saud.jpg' %}" >
+                    <hr>
+                    <h4>Saud Almbdal</h4>
+                    <p>AI And CS student</p>
+                </div>
             </div>
             <div class="col-md-9">
-                <div class="card card-body"></div>
+                <div class="card card-body h-100 border-info">
+                    <h4> what I’ve enjoyed studying this year </h4>
+                    <hr>
+                    <p> ........</p>
+                    <p> ........</p>
+                    <p> ........</p>
+                    <p> ........</p>
+
+                </div>
             </div>
         </div>
         <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-body h-100">
+                    <h4> The upcoming academic year.</h4>
+                    <hr>
+                    <p>........</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-body h-100">
+                    <h4> Description of how Django works.</h4>
+                    <hr>
+                    <p>........</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!--
         <div class="row">
             <div class="col-md-6">
                 <div class="card card-body"></div>
@@ -38,15 +69,7 @@
             </div>
         </div>
         <br>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card card-body"></div>
-            </div>
-            <div class="col-md-6">
-                <div class="card card-body"></div>
-            </div>
-        </div>
-        <br>
+        -->
     </div>
 
 </body>
