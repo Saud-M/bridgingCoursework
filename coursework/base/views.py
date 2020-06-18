@@ -13,6 +13,3 @@ def about(request, *args, **kwargs):
 
 def projects(request, *args, **kwargs):
 	return render(request, 'base/projects.html', {})
-
-def contact(request, *args, **kwargs):
-	return render(request, 'base/contact.html', {})
