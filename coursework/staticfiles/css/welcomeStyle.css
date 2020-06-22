@@ -4,7 +4,7 @@
 	font-family: sans-serif;
 }
 body{
-	background: #DCDCDC!important;
+	background: #a1bde7!important;
 }
 
 
@@ -22,19 +22,19 @@ body{
 }
 
 .text1{
-	color: black;
+	color: white;
 	font-size: 60px;
 	font-weight: 700;
 	letter-spacing: 8px
 	margin-bottom: 20px;
-	background: #DCDCDC!important;
+	background: #a1bde7!important;
 	position: relative;
 	animation: text 3s 1;
 }
 
 .text2{
 	font-size: 30px;
-	color: teal;
+	color: #2c3e50;
 }
 
 @keyframes text {
