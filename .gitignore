@@ -1,0 +1,11 @@
+db.sqlite3
+geckodriver.log
+virtualenv
+__pycache__
+*.pyc
+.DS_Store
+pyvenv.cfg
+coursework/bin
+coursework/lib
+*.sublime-project
+*.sublime-workspace

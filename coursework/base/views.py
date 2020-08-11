@@ -7,9 +7,3 @@ def home(request, *args, **kwargs):
 
 def welcome(request, *args, **kwargs):
     return render(request, 'base/welcome.html', {})
-
-def about(request, *args, **kwargs):
-	return render(request, 'base/about.html', {})
-
-def projects(request, *args, **kwargs):
-	return render(request, 'base/projects.html', {})

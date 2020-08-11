@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<meta name="viewport" content="width=device-width"/>
+<meta charset="UTF-8"> 
+
+<link type="text/css" rel="stylesheet" href="{% static 'css/cv.css' %}">
+<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+
+</head>
+<body id="top">
+<div id="cv" class="instaFade">
+	<div class="mainDetails">
+		<div id="headshot" class="quickFade">
+			<img src="{% static 'images/Saud.png' %}" alt="Saud Almbdal" />
+		</div>
+		
+		<div id="name">
+			<h1 class="quickFade delayTwo">Saud Almbdal</h1>
+			<h3 class="quickFade delayThree">AI and Computer Science Student</h3>
+		</div>
+		
+		<div id="contactDetails" class="quickFade delayFour">
+			<ul>
+				<li><a href="mailto:s.almbdal@gmail.com" target="_blank">s.almbdal@gmail.com</a></li>
+				<li>+44 7378634033</li>
+				<li>+966 552968000</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div id="mainArea" class="quickFade delayFive">
+		{% if profiles %}
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1>Personal Profile</h1>
+				</div>
+				
+				<div class="sectionContent">
+					{% for profile in profiles %}
+					<p>{{ profile }}</p>
+					{% endfor %}
+				</div>
+				
+			</article>
+			<div class="clear"></div>
+		</section>
+		{% endif %}
+		
+		{% if educations %}
+		<section>
+			<div class="sectionTitle">
+				<h1>Education</h1>
+			</div>
+			
+			
+			<div class="sectionContent" >
+				{% for education in educations %}
+				<article id='education'>
+					<h2>{{ education.title }}</h2>
+					<p class="subDetails" >{{ education.details }}</p>
+					{% if education.courses.all %}
+					<li style="list-style-type: none; padding-bottom: 10px;">Courses:</li>
+						<ul class="keySkills">
+							{% for course in education.courses.all %}
+							<li class="course">{{ course.course }}</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+					
+				</article>
+				{% endfor %}
+			</div>
+			
+			<div class="clear"></div>
+		</section>
+		{% endif %}
+		
+		{% if proficientLanguages %}
+		<section>
+			<div class="sectionTitle">
+				<h1>Programming Languages (Proficient)</h1>
+			</div>
+			
+			<div class="sectionContent">
+				
+				<ul class="keySkills" id="proLang">
+					{% for proLang in proficientLanguages %}
+					<li>{{ proLang.ppl }}</li>
+					{% endfor %}
+				</ul>
+				
+			</div>
+			<div class="clear"></div>
+		</section>
+		{% endif %}
+
+		{% if familiarLanguages %}
+		<section>
+			<div class="sectionTitle">
+				<h1>Programming Languages (Familiar)</h1>
+			</div>
+			
+			
+			<div class="sectionContent">
+				
+				<ul class="keySkills">
+					{% for famLang in familiarLanguages %}
+					<li>{{ famLang.fpl }}</li>
+					{% endfor %}
+				</ul>
+				
+			</div>
+			
+			<div class="clear"></div>
+		</section>
+		{% endif %}
+
+		{% if languages %}
+		<section>
+			<div class="sectionTitle">
+				<h1>Languages</h1>
+			</div>
+			
+			<div class="sectionContent">
+				
+				<ul class="keySkills">
+					{% for lang in languages %}
+					<li>{{ lang.language}}</li>
+					{% endfor %}
+				</ul>
+				
+			</div>
+			<div class="clear"></div>
+		</section>
+		{% endif %}
+		
+		
+	</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3753241-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>
+
+
+{% endblock %}
